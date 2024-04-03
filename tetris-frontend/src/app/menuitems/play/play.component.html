@@ -1,0 +1,46 @@
+<div
+    id="container"
+    [ngStyle]="{
+    'filter': isGamePaused || gameOver ? 'blur(10px)' : ''
+}"
+>
+    <div id="score-container">
+        <div id="pause" (click)="pauseGame()">
+            <h1>Pause</h1>
+        </div>
+        <div id="game-info">
+            <h1>Score: {{gameBoard.score}}</h1>
+            <h1>Level: {{gameBoard.level}}</h1>
+        </div>
+    </div>
+    <div id="game-container">
+        <canvas id="game-canvas" #gameCanvas></canvas>
+    </div>
+    <div id="upcoming-shape-container">
+        <canvas id="shape-canvas" #shapeCanvas></canvas>
+    </div>
+</div>
+
+<div id="game-paused" *ngIf="isGamePaused">
+    <h1>Game paused.</h1>
+    <div id="actions">
+        <div class="action" (click)="startGameTick(); ">Resume</div>
+        <div class="action" (click)="startGame()">Restart</div>
+        <div class="action" (click)="router.navigate(['home'])">Exit</div>
+    </div>
+</div>
+
+<div id="game-over" *ngIf="gameOver">
+    <div id="info">
+        <h1>Game over!</h1>
+        <h2 id="final-score">Final score: {{gameBoard.score}}</h2>
+        <h2 id="final-level">You reached level {{gameBoard.level}}.</h2>
+
+        <div class="action" (click)="startGame()">
+            <h2>Restart</h2>
+        </div>
+        <div class="action" (click)="router.navigate(['home'])">
+            <h2>Exit</h2>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+#content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    h2 {
+        margin: auto;
+        display: inline;
+        font-size: 3rem;
+        text-align: center;
+        #name {
+            color: rgb(76, 145, 180);
+            font-size: 3rem;
+        }
+    }
+    p{
+        margin: auto;
+        margin-top: 16px;
+    }
+
+    div {
+        margin: auto;
+        p {
+            display: inline;
+        }
+
+        #clickable {
+            color: #7091F5;
+            cursor: pointer;
+
+            color: #7091F5;
+            transition-duration: 300ms;
+
+            &:hover {
+                color: gold;
+            }
+        }
+
+    }
+    #error-message {
+        margin: auto;
+        margin-top: 16px;
+        color: rgb(206, 106, 106);
+    }
+}

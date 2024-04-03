@@ -1,0 +1,19 @@
+#content {
+    div{
+        display: flex;
+        flex-direction: column;
+        a{
+            color: #7091F5;
+            text-decoration: none;
+            font-size: large;
+            transition-duration: 300ms;
+
+            &:hover {
+                color: gold;
+            }
+        }
+        * {
+            margin: auto;
+        }
+    }
+}

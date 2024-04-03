@@ -1,0 +1,14 @@
+<div id="content">
+    <div *ngIf="!error" id="valid">
+
+        <h1>Your email has been verified!</h1>
+        <br>
+        
+        <a routerLink="/sign-in">SIGN-IN</a>
+    </div>
+    <div *ngIf="error" id="error">
+        <h1>
+            Oops! Something went wrong... 
+        </h1>
+    </div>
+</div>

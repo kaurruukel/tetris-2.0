@@ -1,0 +1,13 @@
+<div id="content" *ngIf="!success">
+    <h3>Please enter a new email.</h3>
+    <div id="form-container">
+        <app-form 
+        [inputsObject]="inputsObject"
+        (submitForm)="submit($event)"
+        ></app-form>
+    </div>
+    <p>{{error}}</p>
+</div>
+<div id="success" *ngIf="success">
+    <h2>Your email has been successfully updated!</h2>
+</div>

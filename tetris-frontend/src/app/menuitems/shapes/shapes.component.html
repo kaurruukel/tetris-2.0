@@ -1,0 +1,84 @@
+<div id="container">
+
+    <div id="buttons-container">
+
+        
+        <div id="back-button" (click)="router.navigate(['home'])">
+            <h3>
+                Back
+            </h3>
+        </div>
+
+        <svg *ngIf="!showInfo" (click)="showInfo=true" fill="#000000" height="80px" width="80px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                    viewBox="0 0 330 330" xml:space="preserve">
+                    <g>
+                        <g>
+                            <g>
+                                <path d="M165,0.008C74.019,0.008,0,74.024,0,164.999c0,90.977,74.019,164.992,165,164.992s165-74.015,165-164.992
+                                C330,74.024,255.981,0.008,165,0.008z M165,299.992c-74.439,0-135-60.557-135-134.992S90.561,30.008,165,30.008
+                                s135,60.557,135,134.991C300,239.436,239.439,299.992,165,299.992z"/>
+                                <path d="M165,130.008c-8.284,0-15,6.716-15,15v99.983c0,8.284,6.716,15,15,15s15-6.716,15-15v-99.983
+                                C180,136.725,173.284,130.008,165,130.008z"/>
+                                <path d="M165,70.011c-3.95,0-7.811,1.6-10.61,4.39c-2.79,2.79-4.39,6.66-4.39,10.61s1.6,7.81,4.39,10.61
+                                c2.79,2.79,6.66,4.39,10.61,4.39s7.81-1.6,10.609-4.39c2.79-2.8,4.391-6.66,4.391-10.61s-1.601-7.82-4.391-10.61
+                                C172.81,71.61,168.95,70.011,165,70.011z"/>
+                            </g>
+                        </g>
+                    </g>
+        </svg>
+    </div>
+
+    <div id="info-container" *ngIf="showInfo">
+        <div id="info" >
+            <h1>Welcome to <h1 id="gold-text">shapes</h1>!</h1>
+            
+            <h3>Here you can create your own shapes to play tetris with.</h3>
+            <h3>You can replace up to two shapes from the list of default shapes!</h3>
+            <h3>1. Click on a shape you would like to replace. <br>
+                2. Draw in the grid the new shape you would like to play with. <br>
+                3. You are done! Start a new game and play with your personalized shapes!
+            </h3>
+            
+            <div id="button" (click)="showInfo=false">Got it!</div>
+        </div>
+    </div>
+        
+    <div id="main"
+    [ngStyle]="{
+        'filter': showInfo ? 'blur(50px)' : ''
+    }"
+    >
+    <div id="grids-container" #gridsContainer>
+        <div class="grid">
+        </div>
+        <div class="grid"></div>
+    </div>
+    <div id="shapes-container">
+        <svg #svg0 [@selectUnSelect]="svgs['svg0'] ? 'select' : 'unSelect'" (click)="toggleChoice('svg0')" width="32" height="122" viewBox="0 0 32 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M28 1H4C2.34315 1 1 2.34314 1 4V118C1 119.657 2.34315 121 4 121H28C29.6569 121 31 119.657 31 118V4C31 2.34315 29.6569 1 28 1Z" fill="#76BA99" stroke="black"/>
+        </svg>
+        <svg #svg1 [@selectUnSelect]="svgs['svg1'] ? 'select' : 'unSelect'" (click)="toggleChoice('svg1')" width="62" height="92" viewBox="0 0 62 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M28 1H4C2.34315 1 1 2.34315 1 4V88C1 89.6569 2.34315 91 4 91H58C59.6569 91 61 89.6569 61 88V64C61 62.3431 59.6569 61 58 61H34C32.3431 61 31 59.6569 31 58V4C31 2.34315 29.6569 1 28 1Z" fill="#417261" stroke="black"/>
+        </svg>
+        <svg #svg2 [@selectUnSelect]="svgs['svg2'] ? 'select' : 'unSelect'" (click)="toggleChoice('svg2')" width="62" height="92" viewBox="0 0 62 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M58 1H34C32.3431 1 31 2.34315 31 4V58C31 59.6569 29.6569 61 28 61H4C2.34315 61 1 62.3431 1 64V88C1 89.6569 2.34315 91 4 91H58C59.6569 91 61 89.6569 61 88V4C61 2.34315 59.6569 1 58 1Z" fill="#9CAA89" stroke="black"/>
+        </svg>
+        <svg #svg3 [@selectUnSelect]="svgs['svg3'] ? 'select' : 'unSelect'" (click)="toggleChoice('svg3')" width="92" height="62" viewBox="0 0 92 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 58V34C1 32.3431 2.34315 31 4 31H28C29.6569 31 31 29.6569 31 28V12.75V4C31 2.34315 32.3431 1 34 1H58C59.6569 1 61 2.34315 61 4V28C61 29.6569 62.3431 31 64 31H88C89.6569 31 91 32.3431 91 34V58C91 59.6569 89.6569 61 88 61H4C2.34315 61 1 59.6569 1 58Z" fill="#3D3D37" stroke="black"/>
+        </svg>
+        <svg #svg4 [@selectUnSelect]="svgs['svg4'] ? 'select' : 'unSelect'" (click)="toggleChoice('svg4')" width="92" height="62" viewBox="0 0 92 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 34V58C1 59.6569 2.34315 61 4 61H58C59.6569 61 61 59.6569 61 58V34C61 32.3431 62.3431 31 64 31H88C89.6569 31 91 29.6569 91 28V4C91 2.34315 89.6569 1 88 1H34C32.3431 1 31 2.34315 31 4V14.25V28C31 29.6569 29.6569 31 28 31H4C2.34315 31 1 32.3431 1 34Z" fill="#8D9EFF" stroke="black"/>
+        </svg>
+        <svg #svg5 [@selectUnSelect]="svgs['svg5'] ? 'select' : 'unSelect'" (click)="toggleChoice('svg5')" width="92" height="62" viewBox="0 0 92 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 28V4C1 2.34315 2.34315 1 4 1H58C59.6569 1 61 2.34315 61 4V28C61 29.6569 62.3431 31 64 31H88C89.6569 31 91 32.3431 91 34V58C91 59.6569 89.6569 61 88 61H34C32.3431 61 31 59.6569 31 58V34C31 32.3431 29.6569 31 28 31H4C2.34315 31 1 29.6569 1 28Z" fill="#FB8B23" stroke="black"/>
+        </svg>
+        <svg #svg6 [@selectUnSelect]="svgs['svg6'] ? 'select' : 'unSelect'" (click)="toggleChoice('svg6')" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 58V4C1 2.34315 2.34315 1 4 1H58C59.6569 1 61 2.34315 61 4V58C61 59.6569 59.6569 61 58 61H4C2.34315 61 1 59.6569 1 58Z" fill="#A9AF7E" stroke="black"/>
+        </svg>
+            
+            
+    </div>
+
+
+    </div>
+</div>

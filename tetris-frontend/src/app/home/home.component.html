@@ -1,0 +1,30 @@
+<div id="container"
+    >
+    <div id="menu-items">
+        <h1
+        [ngStyle]="{
+            'opacity': clicked ? 0 : 1,
+            'transition-duration': 200
+        }"
+        >Welcome, {{appService.user.name}}!</h1>
+        <div 
+        *ngFor="let item of menuItems; let i = index" 
+        class="menu-item" 
+        [ngStyle]="{
+            'background-color': item.color,
+            'box-shadow': '8px 8px 7px 1px' + item.color + '70',
+            'color': item.fontColor,
+            'transition-delay' : clicked ? (50*i) + 'ms' : '0ms',
+            'opacity': clicked ? 0 : 1,
+            'transition-duration': clicked ? 500 : 200
+        }"
+        (click)="navigate(item.color ,item.route)"
+        >
+        {{item.heading}}
+        <div class="logo" *ngIf="item.svgSource">
+            <img src="{{item.svgSource}}" width="64px" height="64px">
+        </div>
+    </div>
+        
+    </div>
+</div>

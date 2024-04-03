@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+#container {
+    height: min-content;
+    width: 100%;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+
+
+    #input-container {
+
+
+
+        display: flex;
+        border: 1px solid black;
+        overflow: visible;
+        border-radius: 4px;
+        width: 100%;
+        transition-duration: 200ms;
+
+        height: 50px;
+        input {
+            height: 100%;
+            width: 100%;
+            outline: none;
+            border: none;
+            background-color: rgba(255, 255, 255, 0);
+            line-height: 100%;
+            padding: 0;
+
+            padding-left: 8px;
+            &:focus {
+                outline: none;
+                
+            }
+        }
+
+        #toggle {
+            width: 50px;
+
+            svg {
+                width: 50px;
+                padding: 12px;
+                height: 100%;
+            }
+        }
+
+
+    }
+    #error-container {
+        height: 20px;
+        
+        #error {
+            height: 20px;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            
+            font-size: 12px;
+        }
+    }
+}
+

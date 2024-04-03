@@ -1,0 +1,92 @@
+#container {
+    width: 100%;
+    display: flex;
+    #content {
+        width: 75%;
+        margin: auto;
+
+        border-radius: 8px;
+        box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.75);
+
+        border: 1px solid rgba(255, 255, 255, 0.341);
+        
+        display: flex;
+
+        #informations {
+            width: 100%;
+
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+
+            #used-shapes {
+                width: 100%;
+                height: 100%;
+
+                display: flex;
+                position: relative;
+
+                .shape {
+                    width: 100%;
+                    height: 110px;
+                    margin: auto;
+
+
+                    border-right: 1px solid rgb(67, 67, 194);
+                    
+                    
+                    display: flex;
+                    canvas {
+                        padding: 4px;
+                        width: min-content;
+                        height: min-content;
+                        margin: auto;
+                        image-rendering: pixelated;
+
+                    }
+                }
+            }
+        }
+        #container-2 {
+            width: 50%;
+            height: 500px;
+
+            display: flex;
+            flex-direction: column;
+
+            #close-button-container {
+                height: 50px;
+                width: 100%;
+                position: relative;
+
+                padding: 10px;
+                svg {
+                    width: 30px;
+                    height: 30px;
+                    opacity: 0.75;
+
+                    float: right;
+                    border-radius: 50%;
+
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: rgba(173, 173, 173, 0.3);
+                    }
+                }
+            }
+
+            #game-end-state {
+                height: 100%;
+                width: 100%;
+                display: flex;
+
+                canvas {
+                    margin: auto;
+                    image-rendering: pixelated;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,38 @@
+<div id="container">
+    <div id="main">
+        
+        <div id="secondary"
+        [@confirm]="state=='standBy' ? 'top' :'mid' "
+        >
+            <div id="confirm"
+            class="button"
+            (click)="signOut()"
+            >
+                <p>
+                    Confirm
+                </p>
+            </div>
+            <div 
+            id="cancel"
+            (click)="state='standBy'"
+            class="button"
+            >
+                <p>
+                    Cancel
+                </p>
+            </div>
+
+        </div>
+
+        <div id="primary"
+        (click)="state='prompt'"
+        [@confirm]="state=='standBy' ? 'mid' :'bot' "
+        class="button"
+        >
+
+            <p>
+                Sign out!
+            </p>
+        </div>
+    </div>
+</div>

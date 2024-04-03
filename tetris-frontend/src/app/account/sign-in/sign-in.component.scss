@@ -1,0 +1,45 @@
+#sign-in-container {
+    display: flex;
+    flex-direction: column;
+    h1 {
+        margin: auto;
+    }
+    #form-container{
+        margin: auto;
+        width: 300px;
+        padding-top: 32px;
+        display: flex;
+        flex-direction: column;
+    }
+    h4{
+        margin: auto;
+        margin-top: 8px;
+        a{
+            color: #7091F5;
+            text-decoration: none;
+            font-size: inherit;
+            transition-duration: 300ms;
+    
+            &:hover {
+                color: gold;
+            }
+        }
+    }
+    #forgot-password {
+        border-bottom: 1px solid #7091F5;
+        transition-duration: 200ms;
+        text-decoration: none;
+        color: #7091F5;
+        margin: auto;
+        margin-top: 8px;
+        
+        
+        &:hover {
+            color: gold;
+            border-bottom: 1px solid gold;
+        }
+    }
+    p {
+        margin: auto;
+    }
+}

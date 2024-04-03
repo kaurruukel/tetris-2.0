@@ -1,0 +1,25 @@
+<div id="container">
+    <div id="content">
+        <h1>Account</h1>
+        <div id="information-container">
+            <div id="menu">
+                <div 
+                class="menu-item" 
+                *ngFor="let item of menuItems"
+                (click)="navigate(item)"
+                [ngStyle]="{
+                    'background-color': item.color,
+                    'box-shadow': '8px 8px 7px 1px' + item.color + '70',
+                    'scale': item.active ? '1.15' : '1'
+                }"
+                
+                >
+                    {{item.heading}}
+                </div>
+            </div>
+            <div id="outlet">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

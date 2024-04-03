@@ -1,0 +1,12 @@
+<div id="screen-container"
+    [ngStyle]="{
+        'background-color' : appService.backgroundColor
+    }"
+>
+    <nav>
+        <h1>tetris.</h1>
+    </nav>
+    <router-outlet></router-outlet>
+</div>
+
+<app-loading-screen *ngIf="appService.loading"></app-loading-screen>

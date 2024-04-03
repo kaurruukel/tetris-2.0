@@ -1,0 +1,15 @@
+<div id="sign-in-container">
+    <h1>Fill out the fields below to log in.</h1>
+
+    <div id="form-container">
+
+        <app-form 
+        [inputsObject]="inputsObject"
+        (submitForm)="onSubmit($event)"
+        ></app-form>
+        
+    </div>
+    <h4>No Account? Sign up <a (click)="appService.toggleLoading(true)" routerLink="/sign-up">here!</a></h4>
+    <a (click)="appService.toggleLoading(true)"  id="forgot-password" routerLink="/forgot-password">Forgot password?</a>
+    <p style="color: red;">{{errorMessage}}</p>
+</div>

@@ -1,0 +1,55 @@
+#container {
+    width: 100%;
+    display: flex;
+    #content {
+        margin: auto;
+        width: 65%;
+
+        #information-container{
+            width: 100%;
+            height: 500px;
+            display: flex;
+
+            #menu, #outlet {
+                height: 100%;
+            }
+
+            #menu {
+                width: 300px;
+
+                padding-top: 48px;
+                .menu-item {
+                    width: 100%;
+                    font-size: 22px;
+                    line-height: 22px;
+                    padding: 8px;
+                    margin-bottom: 8px;
+                    cursor: pointer;
+                    box-sizing: border-box;
+                    
+                    border-radius: 4px;
+                    transition-timing-function: cubic-bezier(.72,-0.67,.76,.89);
+                    transition-duration: 200ms;
+                    transform-origin: right;
+
+                    &:hover {
+                        scale: 1.1 !important;
+                    }
+
+                    &:last-child {
+                        margin-top: 26px;
+                    }
+
+                    
+                }
+
+            }
+
+            #outlet{
+                width: 100%;
+                padding-left: 48px;
+            }
+        }
+    }
+    
+}

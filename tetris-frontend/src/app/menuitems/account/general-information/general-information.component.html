@@ -1,0 +1,57 @@
+<div id="container">
+    <h2>General information</h2>
+    <div class="information">
+        <div class="heading"
+            [ngStyle]="{
+                'background-color' : '#3F6F8C70'
+            }"
+            >
+            Username: 
+        </div>
+        <h3>
+            {{appService.user.name}}
+        </h3>
+        <div class="change"
+            [ngStyle]="{
+            'background-color' : '#3F6F8C70',
+            'box-shadow': '8px 8px 7px 1px #3F6F8C70'
+            }"
+            (click)="navigate('change-username')"
+            >
+                Change&nbsp;username
+        </div>
+    </div>
+    <div class="information">
+        <div class="heading"
+        [ngStyle]="{
+            'background-color' : '#A7CBD990'
+        }"
+        >
+        Email: 
+    </div>
+    <h3>
+        {{appService.user.email}}
+    </h3>
+    <div class="change"
+    [ngStyle]="{
+        'background-color' : '#A7CBD990',
+        'box-shadow': '8px 8px 7px 1px #A7CBD990'
+        }"
+        (click)="navigate('change-email')"
+        >
+            Change&nbsp;email
+        </div>
+    </div>
+    <div class="information">
+    <div class="change"
+    [ngStyle]="{
+        'background-color' : '#659AA6',
+        'box-shadow': '8px 8px 7px 1px #659AA6'
+        }"
+        (click)="navigate('change-password')"
+        >
+        
+            Change password
+        </div>
+    </div>
+</div>

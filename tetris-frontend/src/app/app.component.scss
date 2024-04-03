@@ -1,0 +1,15 @@
+#screen-container {
+    min-height: 100%;
+    transition-duration: 400ms;
+    nav {
+        height: 64px;
+        display: flex;
+
+        h1 {
+            margin: auto;
+            margin-bottom: 36px;
+            font-size: 3em;
+            color: rgb(0, 0, 0);
+        }
+    }
+}

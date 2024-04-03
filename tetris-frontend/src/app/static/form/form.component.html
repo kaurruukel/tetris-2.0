@@ -1,0 +1,14 @@
+<div id="container"  (keyup.enter)="submit()">
+    <app-input *ngFor="let input of inputsObject.inputs"
+    [name]="input.name"
+    [isPassword]="input.isPassword"
+    [placeHolder]="input.placeholder"
+    [UiName]="input.uiValue"
+    [requirements]="input.requirements"
+    (inputValueEmitter)="valueChange($event)"
+    (matchingCheckEmitter)="checkMatchingErrors($event)"
+    [submitAttempt]="submitAttempt"
+    [isMatchingError]="matchingDependencies[input.name].error"
+    ></app-input>
+    <input type="submit" id="submit" (click)="submit()">
+</div>

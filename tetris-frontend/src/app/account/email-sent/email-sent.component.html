@@ -1,0 +1,14 @@
+<div id="content-container">
+    <h2 *ngIf="!resent">Thank you <h2 id="name">{{name}}</h2> for signing up!</h2>
+    <h2 *ngIf="resent">Thank you for sticking with us, <h2 id="name">{{name}}</h2>!</h2>
+
+    <p>We have sent you another email on {{email}}.</p>
+    <br>
+    <div>
+
+        <p>Didn't receive it? </p>
+        <p (click)="resendEmail()" id="clickable">Click here to resend.</p>
+
+    </div>
+    <p id="error-message">{{errorMessage}}</p>
+</div>

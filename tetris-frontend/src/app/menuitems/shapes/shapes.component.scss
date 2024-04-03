@@ -1,0 +1,152 @@
+#container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    #buttons-container {
+
+        width: 100%;
+
+        display: flex;
+
+        
+        
+        #back-button {
+            height: 75px;
+            border-radius: 4px 8px;
+            width: 100px;
+            border: 1px solid black;
+            margin-left: 5%;
+            z-index: 2;
+            display: flex;
+
+
+            cursor: pointer;
+
+            box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.75);
+
+            transition-duration: 200ms;
+
+            h3 {
+                margin: auto;
+            }
+
+            &:hover {
+                background-color: rgb(222, 201, 86);
+                border: 1px solid white;
+            }
+        }
+
+        svg {
+            height: 100%;
+            width: 40px;
+            margin: auto;
+            margin-right: 20%;
+            opacity: 0.6;
+
+            border-radius: 50%;
+
+            padding: 8px;
+
+
+            transition-duration: 200ms;
+            
+
+            &:hover {
+                background-color: rgba(153, 153, 153, 0.412);
+            }
+        }
+}
+
+    #info-container {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        padding: 32px;
+        z-index: 1;
+        #info {
+            margin: auto;
+            max-width: 650px;
+
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                margin: auto;
+                display: inline;
+
+                #gold-text {
+                    font-size: inherit;
+                    color: rgb(230, 211, 106);
+                }
+            }
+
+            #button {
+                font-size: 26px;
+                margin: auto;
+
+                padding: 8px;
+                border-radius: 4px;
+                box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.75);
+
+                box-sizing: border-box;
+
+                cursor: pointer;
+                transition-duration: 200ms;
+
+                border: 1px solid rgba(255, 255, 255, 0);
+                &:hover {
+                    background-color: gold;
+                    border: 1px solid white;
+                }
+
+
+            }
+        }
+    }
+
+
+    #main {
+        margin: auto;
+
+        transition-duration: 400ms;
+        display: flex;
+        flex-direction: column;
+
+        #grids-container {
+
+            display: flex;
+
+            margin: auto;
+            margin-top: 48px;
+            
+
+            .grid {
+                width: 200px;
+                height: 200px;
+                border-radius: 4px;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+
+                .active {
+                    background-color: red;
+                }
+
+                &:last-child {
+                    margin-left: 24px;
+                }
+
+
+            }
+        }
+
+        #shapes-container {
+            margin: auto;
+
+            svg {
+                margin: 4px 8px;
+            }
+        }
+    }
+}
+

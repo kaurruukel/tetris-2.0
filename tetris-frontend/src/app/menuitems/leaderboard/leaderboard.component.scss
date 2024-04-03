@@ -1,0 +1,175 @@
+#container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    #content {
+        transition-duration: 400ms;
+        #back-button {
+            height: 75px;
+            border-radius: 4px 8px;
+            position: absolute;
+            width: 100px;
+            border: 1px solid black;
+            margin-left: 2%;
+            z-index: 2;
+            display: flex;
+            
+            
+            cursor: pointer;
+            
+            box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.75);
+            
+            transition-duration: 200ms;
+            
+            h3 {
+                margin: auto;
+            }
+            
+            &:hover {
+                background-color: darkblue;
+                color: white;
+                border: 1px solid white;
+            }
+        }
+        
+        h1 {
+            width: 75%;
+            margin: auto;
+        }
+
+        #choice-container {
+            height: 50px;
+            width: 100%;
+
+
+            display: flex;
+
+            div {
+                height: 100%;
+
+                margin: auto;
+
+                display: flex;
+
+                h3 {
+                    margin: auto;
+                    cursor: pointer;
+                    padding: 4px;
+
+                    border-radius: 4px;
+
+                    transition-duration: 200ms;
+                    &:hover {
+                        box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.75);
+                        
+                    }
+                }
+            }
+
+            #top10 {
+                margin-right: 10px;
+            }
+
+            #user-best {
+                margin-left: 0;
+            }
+            
+        }
+        
+        #leaderboard-container {
+            width: 75%;
+            margin: auto;
+            padding-top: 16px;
+            max-height: 610px;
+
+            overflow-y: scroll;
+            overflow-x: visible;
+
+            
+
+            
+            border-top: 1px solid darkblue;
+            display: flex;
+            flex-direction: column;
+            .headings {
+                display: flex;
+                
+                h3 {
+                    display: inline;
+                    width: calc(1/3 * 100%);
+                    text-align: center;
+                }
+            }
+            
+            .leaderboard-entry {
+                
+                display: flex;
+                height: 45px;
+                min-height: 45px;
+                border: 1px solid black;
+                border-radius: 4px 8px;
+                margin-bottom: 8px;
+                
+                .username {
+                    p{
+                        color: black;
+                    }
+                    color: #331D2C;
+                }
+                .score {
+                    color: #3F2E3E;
+                }
+                .level {
+                    color: #3F2E3E;
+                }
+                
+                div {
+                    width: 25%;
+                    text-align: center;
+                    margin: auto;
+                    align-items: center;
+                    
+                    
+                    svg {
+                        height: 30px;
+                        width: 30px;
+                        padding: 5px;
+                        border-radius: 50%;
+                        transition-duration: 200ms;
+                        
+                        cursor: pointer;
+                        &:hover{
+                            background-color: rgba(162, 162, 162, 0.459);
+                        }
+                    }
+                }
+                
+                .username {
+                    position: relative;
+                    p {
+                        margin: 0;
+                        font-size: inherit;
+                        
+                        position: absolute;
+                        left: 0;
+                        padding-left: 4px;
+                    }
+                    
+                }
+                
+            }
+        }
+        
+    }
+    #details {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        
+        top: 0;
+        
+    }
+}
