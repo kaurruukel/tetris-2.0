@@ -261,10 +261,12 @@ export class UserService {
 			context: !isPasswordResetEmail
 				? {
 					name: user.name,
+					front_url: process.env.URL,
 					link: process.env.URL + '/verified-email/' + user.uuid,
 				}
 				: {
 					name: user.name,
+					front_url: process.env.URL,
 					link:
 						process.env.URL +
 						'/reset-password/' +
