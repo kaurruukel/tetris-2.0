@@ -254,7 +254,7 @@ export class UserService {
 		transporter.use('compile', hbs(handlebarOptions));
 
 		const mailOptions = {
-			from: '"Tetriskj" <tetris.email.authentication@gmail.com>', // sender address
+			from: '"Tetris" <tetris.email.authentication@gmail.com>', // sender address
 			to: user.email, // list of receivers
 			subject: isPasswordResetEmail ? 'Password reset' : 'Welcome!',
 			template: isPasswordResetEmail ? 'password' : 'email', // the name of the template file i.e email.handlebars

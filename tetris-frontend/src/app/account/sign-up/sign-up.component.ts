@@ -79,7 +79,6 @@ export class SignUpComponent {
         };
         this.appService.toggleLoading(true);
         this.apiService.signUp(this.credentials).subscribe({
-            // TODO: trycatch in async func
             error: (e) => {
                 this.errorMessage = e.error.message;
                 this.appService.toggleLoading(false);

@@ -2,7 +2,8 @@
     <h2 *ngIf="!resent">Thank you <h2 id="name">{{name}}</h2> for signing up!</h2>
     <h2 *ngIf="resent">Thank you for sticking with us, <h2 id="name">{{name}}</h2>!</h2>
 
-    <p>We have sent you another email on {{email}}.</p>
+    <p>We have sent you an email to {{email}} to verify your account.</p>
+    <a routerLink="/sign-in">SIGN-IN</a>
     <br>
     <div>
 
