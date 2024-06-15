@@ -2,23 +2,31 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+
     h2 {
         margin: auto;
         display: inline;
         font-size: 3rem;
         text-align: center;
+
         #name {
             color: rgb(76, 145, 180);
             font-size: 3rem;
         }
     }
-    p{
+
+    p {
         margin: auto;
         margin-top: 16px;
     }
 
+    a {
+        margin: auto;
+    }
+
     div {
         margin: auto;
+
         p {
             display: inline;
         }
@@ -36,6 +44,7 @@
         }
 
     }
+
     #error-message {
         margin: auto;
         margin-top: 16px;
