@@ -8,18 +8,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - '3000:3000'
-    environment:
-      - DB_TYPE=postgres
-      - PG_USER=postgres
-      - PG_PASSWORD=postgres
-      - PG_DB=postgres
-      - PG_PORT=5432
-      - PG_HOST=db
-      - PORT=3000
-      - JWT_SECRET=securejwtkey
-      - JWT_SECRET_INTERNAL=internaljwtkeysecurityverygoodandhigh
-      - URL=http://localhost:4200
-      - EMAIL_PASSWORD=tohgshwdtjzywvax
+    env_file:
+      - .env
     depends_on:
       - db
     volumes:
